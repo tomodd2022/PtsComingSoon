@@ -1,4 +1,7 @@
-<input [(ngModel)]="name" #ctrl="ngModel" required />
-<p>Value: {{ name }}</p>
-<p>Valid: {{ ctrl.valid }}</p>
-<button (click)="setValue()">Set value</button>
+<input type="text" [(ngModel)]="fnamee" id="fnamee" name="fnamee" #fnameeInput="ngModel">
+{{ fnamee }}
+
+<div *ngIf="!fnameeInput.valid && fnameeInput.dirty">
+    <!-- Show an error message here -->
+    Please enter a valid first name.
+</div><br><br>

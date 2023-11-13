@@ -10,8 +10,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './template-driven-form.component.scss'
 })
 export class TemplateDrivenFormComponent {
-  name: string = '';
-  setValue() {
-    this.name = 'Nancy';
-  }
+  fnamee = '';
+
+  
+
+
 }

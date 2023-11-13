@@ -1,0 +1,39 @@
+<h4>FormControl</h4>
+<!-- FormControl -->
+<input type="text" [formControl]="fname">
+<!-- การแสงค่าที่อยู่ใน formControl -->
+{{ fname.value }}
+
+<br>
+<h4>FormGroup</h4>
+<form [formGroup]="registerForm">
+    <input type="text" formControlName="fname1">&nbsp;
+    <input type="text" formControlName="lname2">
+</form>
+<!-- การแสดงค่าตัวแปร ที่อยู่ใน formGroup -->
+{{ registerForm.get('fname1')?.value }}
+{{ registerForm.get('lname2')?.value }}
+
+
+<br>
+<h4>FormBuilder</h4>
+<form [formGroup]="registerForm1">
+    <input type="text" formControlName="fname11">&nbsp;
+    <input type="text" formControlName="lname22">
+</form>
+<!-- การแสดงค่าตัวแปร ที่อยู่ใน formGroup -->
+{{ registerForm1.get('fname11')?.value }}
+{{ registerForm1.get('lname22')?.value }}
+
+
+<br>
+<h4>Validate</h4>
+<form [formGroup]="registerForm2" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="fname111">&nbsp;
+    <div *ngIf="registerForm2.get('fname111')?.invalid && (registerForm2.get('fname111')?.dirty || registerForm2.get('fname111')?.touched)" class="invalid-feedback">
+        <!-- Show an error message here -->
+        Please enter a valid first name.
+      </div><br><br>
+    <input type="text" formControlName="lname222"> <br><br>
+    <button type="submit">Submit</button>
+</form>
