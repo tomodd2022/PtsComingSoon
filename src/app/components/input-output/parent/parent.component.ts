@@ -11,8 +11,8 @@ import { IDataCalculate  } from '../input-output.model';
   styleUrl: './parent.component.scss'
 })
 export class ParentComponent {
-  result: number;
-  data: IDataCalculate;
+  result!: number;
+  data!: IDataCalculate;
 
   getDataCalculate(data: IDataCalculate){
    this.data = data;
