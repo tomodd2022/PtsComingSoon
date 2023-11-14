@@ -1,0 +1,9 @@
+ng new your-project-name 
+สร้างโปรเจค angular ด้วย angular cli 
+
+ng new your-project-name --style=scss
+สร้างโปรเจค angular กำหนดการใช้ style เป็น scss ถ้า่ไม่ระบุจะ default css มาให้
+
+ng new your-project-name --standalone=false
+
+

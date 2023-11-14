@@ -1,7 +1,11 @@
-<input type="text" [(ngModel)]="fnamee" id="fnamee" name="fnamee" #fnameeInput="ngModel">
+<h4>ngModel</h4>
+<input type="text" [(ngModel)]="fnamee" id="fnamee" name="fnamee">
+<!-- การแสงค่าที่อยู่ใน ngModel -->
 {{ fnamee }}
 
-<div *ngIf="!fnameeInput.valid && fnameeInput.dirty">
-    <!-- Show an error message here -->
-    Please enter a valid first name.
+
+<h4>ngModel อ้างอิงค่าเพื่อมาใช้ใน html</h4>
+<input type="text" [(ngModel)]="fnamee1" id="fnamee" name="fnamee" #fnamee1Input="ngModel" required="">
+<div *ngIf="!fnamee1Input.valid && (fnamee1Input.dirty || fnamee1Input.touched)">
+    แสดงค่า
 </div><br><br>
