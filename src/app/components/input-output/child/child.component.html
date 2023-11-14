@@ -1,16 +1,14 @@
 <div style="margin: 2px;">
-    input1: <input type="text" [(ngModel)]="num1" appNumericOnly>
+    input1: <input type="text" [(ngModel)]="num1" appNumericOnly> <!-- ตัวอย่างการใช้ directive ชื่อ appNumericOnly -->
 </div>
 <div style="margin: 2px;">
     input2: <input type="text" [(ngModel)]="num2">
 </div>
-<div style="margin: 2px;">
-    input2: <input type="number">
-</div>
-
 <div>
     <button style="margin: 2px;" (click)="calculate('+')">+</button>
     <button style="margin: 2px;" (click)="calculate('-')">-</button>
     <button style="margin: 2px;" (click)="calculate('*')">x</button>
     <button style="margin: 2px;" (click)="calculate('%')">÷</button>   
 </div> 
+
+<div>Number1 in child : {{ Number1 }}</div>

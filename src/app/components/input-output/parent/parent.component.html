@@ -1,2 +1,4 @@
-<app-child (eventDataCalculate)="getDataCalculate($event)"></app-child>
+<app-child (eventDataCalculate)="getDataCalculate($event)" [Number1]="number1"></app-child>
 {{ result }} <br>
+
+<div>Number1 in parent : {{ number1 }}</div>

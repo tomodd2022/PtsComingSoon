@@ -14,6 +14,8 @@ export class ParentComponent {
   result!: number;
   data!: IDataCalculate;
 
+  number1: number = 2;
+
   getDataCalculate(data: IDataCalculate){
    this.data = data;
    this.calculate();
@@ -22,16 +24,16 @@ export class ParentComponent {
   calculate(){
     switch (this.data.operator) {
       case '+' :
-        this.result = this.data.num1 + this.data.num2;
+        this.result = parseInt(String(this.data.num1)) + parseInt(String(this.data.num2));
         break;
       case '-' :
-        this.result = this.data.num1 - this.data.num2;
+        this.result = parseInt(String(this.data.num1)) - parseInt(String(this.data.num2));
         break;
       case '*' :
-        this.result = this.data.num1 * this.data.num2;
+        this.result = parseInt(String(this.data.num1)) * parseInt(String(this.data.num2));
         break;
       case '%' :
-        this.result = this.data.num1 / this.data.num2;
+        this.result = parseInt(String(this.data.num1)) / parseInt(String(this.data.num2));
         break;
       default :
     }
