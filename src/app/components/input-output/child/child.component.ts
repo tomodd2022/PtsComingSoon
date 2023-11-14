@@ -12,8 +12,8 @@ import { NumericOnlyDirective } from '../../directive/numeric-only.directive';
   styleUrl: './child.component.scss'
 })
 export class ChildComponent {
-  @Output() eventDataCalculate: EventEmitter<IDataCalculate> = new EventEmitter<IDataCalculate>();
-  
+  @Output() eventDataCalculate = new EventEmitter<IDataCalculate>();
+
   data: IDataCalculate = {
     num1: 0,
     num2: 0,
